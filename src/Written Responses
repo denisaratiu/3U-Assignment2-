@@ -1,0 +1,13 @@
+a) True
+b) True
+c) False
+d) False
+e) False
+f) True
+g) True
+
+The given if-else statements behave the same way. 
+Statement 1 states that if karel can pick thing, he must turn right, and if he cannot pick something to turn left. 
+Statement 2 states the exact same thing but in a different way. 
+It says that if karel cannot pick thing to turn left, otherwise if he could pick thing to turn right.
+Therefore the if-else statements behave the same way.
