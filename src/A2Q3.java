@@ -24,27 +24,32 @@ public class A2Q3 {
         Robot karel = new Robot(kw, 4, 8, Direction.WEST);
         //create algorithm
             
-            if (karel.getDirection() == Direction.EAST) {
+        if (karel.getDirection() == Direction.EAST) {
+            karel.turnLeft();
+            karel.turnLeft();
+        }
+        if (karel.getDirection() == Direction.NORTH) {
+            karel.turnLeft();
+        }
+        if (karel.getDirection() == Direction.WEST) {
+            karel.move();
+        }
+        if (karel.getDirection() == Direction.SOUTH) {
+            karel.turnLeft();
+            karel.turnLeft();
+            karel.turnLeft();
+        }
+        while (karel.getAvenue() > 0) {
+            karel.move();
+        }
+        while (karel.getStreet() > 0) {
+            if (karel.getDirection() == Direction.WEST) {
                 karel.turnLeft();
                 karel.turnLeft();
-            }if (karel.getDirection() == Direction.NORTH) {
                 karel.turnLeft();
-            }if (karel.getDirection() == Direction.WEST) {
-                karel.move();
-            }if (karel.getDirection() == Direction.SOUTH) {
-                karel.turnLeft();
-                karel.turnLeft();
-                karel.turnLeft();
-            }while(karel.getAvenue() >0){
-                    karel.move();
-            }while(karel.getStreet() >0){
-                        if (karel.getDirection()==Direction.WEST){
-                        karel.turnLeft();
-                        karel.turnLeft();
-                        karel.turnLeft();
-                  
-                        }
-                        karel.move();
+
+            }
+            karel.move();
                     }
             
                 }
